@@ -383,6 +383,50 @@ a {
         grid-auto-rows: 200px;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
+
+    /* Houdini CSS */
+    @supports (background: paint(something)) {
+
+        /* .header {
+            --connections-particleColor: rgb(150,180,200);
+            --connections-lineColor: rgb(150,180,200);
+            --connections-particleAmount: 160;
+            --connections-defaultRadius: 1;
+            --connections-variantRadius: 2;
+            --connections-linkRadius: 82;
+
+            background-image: paint(connections);
+        } */
+
+        .header, 
+        .footer {
+            --voronoi-number-of-cells: 125;
+            --voronoi-line-width: 1;
+            --voronoi-dot-size: 0;
+            --voronoi-cell-colors: #FFF, #dfdfdfad, #ffe6e63d, #ffabe246, #a585e248, #7763e925;
+            --voronoi-line-color: rgba(0, 0, 0, .15);
+            --voronoi-dot-color: #000;
+            --voronoi-margin: 0;
+
+            background-image: paint(voronoi);
+            animation: voronoi 5s infinite alternate ease-in-out;
+        }
+
+        .header--darkmode,
+        .footer--darkmode {
+            --voronoi-number-of-cells: 125;
+            --voronoi-line-width: 1;
+            --voronoi-dot-size: 0;
+            --voronoi-cell-colors: #3c3d48, #282a36, #242631, #21232d, #1e2029, #1b1d25;
+            --voronoi-line-color: rgba(0, 0, 0, .15);
+            --voronoi-dot-color: #000;
+            --voronoi-margin: 0;
+            --voronoi-seed: 12345;
+
+            background-image: paint(voronoi);
+            animation: voronoi 5s infinite alternate ease-in-out;
+        }
+    }    
 }
 
 @media screen and (min-width: 1640px) {
@@ -445,48 +489,6 @@ a {
  */
 /* Houdini CSS */
 @supports (background: paint(something)) {
-    
-    /* .header {
-        --connections-particleColor: rgb(150,180,200);
-        --connections-lineColor: rgb(150,180,200);
-        --connections-particleAmount: 160;
-        --connections-defaultRadius: 1;
-        --connections-variantRadius: 2;
-        --connections-linkRadius: 82;
-        
-        background-image: paint(connections);
-    } */
-
-    .header, 
-    .footer {
-        --voronoi-number-of-cells: 125;
-        --voronoi-line-width: 1;
-        --voronoi-dot-size: 0;
-        --voronoi-cell-colors: #FFF, #dfdfdfad, #ffe6e63d, #ffabe246, #a585e248, #7763e925;
-        --voronoi-line-color: rgba(0, 0, 0, .15);
-        --voronoi-dot-color: #000;
-        --voronoi-margin: 0;
-        
-        background-image: paint(voronoi);
-        animation: voronoi 5s infinite alternate ease-in-out;
-    }
-
-    .header--darkmode,
-    .footer--darkmode {
-        --voronoi-number-of-cells: 125;
-        --voronoi-line-width: 1;
-        --voronoi-dot-size: 0;
-        --voronoi-cell-colors: #3c3d48, #282a36, #242631, #21232d, #1e2029, #1b1d25;
-        --voronoi-line-color: rgba(0, 0, 0, .15);
-        --voronoi-dot-color: #000;
-        --voronoi-margin: 0;
-        --voronoi-seed: 12345;
-
-        background-image: paint(voronoi);
-        animation: voronoi 5s infinite alternate ease-in-out;
-    }
-    
-    
     .footer__credit {
         /* 
        Optionally set property values. 
