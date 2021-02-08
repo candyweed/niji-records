@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <title>Niji Records</title>
+</head>
+
+<body>
+    <!-- Bloque -->
+    <header id="header" class="header">
+        <div class="container container--header">
+            <div class="header__logo">
+                <a class="header__logo-link" aria-label="Todas las fotos" href=".index-dd.html">
+                    <span id="header__logo-icon" class="header__logo-icon"></span>
+                    <span id="header__logo-title" class="header__logo-title">Niji Records</span>
+                </a>
+            </div>
+            <div class="header__options">
+                <div class="header__social">
+                    <a href="https://twitter.com/dpokey_" class="header__social-link--twitter" target="blank">
+                        <i class="fab fa-twitter"></i>
+                        <span class="header__social-title">Twitter</span>
+                    </a>
+                    <a href="https://github.com/dpokey" class="header__social-link--github">
+                        <i class="far fa-star"></i>
+                        <span class="header__social-title">Star</span>
+                    </a>
+                </div>
+                <button id="header__switch" class="header__switch">
+                    <span class="header__switch-icon">
+                        <i class="fas fa-sun"></i>
+                    </span>
+                    <span class="header__switch-icon">
+                        <i class="fas fa-moon"></i>
+                    </span>
+                </button>
+                <div id="header__menu" class="header__menu">
+                    <span class="header__menu-icon">•••</span>
+                    <div id="header__menu-main" class="header__menu-main">
+                        <a data-button="gallery" class="header__menu-link header__menu-link--selected"
+                            href="#">Galeria</a>
+                        <div id="header__menu-seperator" class="header__menu-seperator"></div>
+                        <a data-button="account" class="header__menu-link" href="#">Cuenta</a>
+                        <a data-button="closesession" class="header__menu-link" href="#">Cerrar Sesion</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bloque -->
+    <main class="main">
+        <div class="container container--main">
+            <section class="gallery">
+                <!-- <picture>
+                    <source media="(min-width: 1360px)" srcset="./assets/images/75pc/1-75pc.jpg">
+                    <source media="(min-width: 768px)" srcset="./assets/images/50pc/1-50pc.jpg">
+                    <img src="./assets//images/25pc/1-25pc.jpg" alt="Imagen 1">
+                </picture> -->
+                <img src="./assets/images/25pc/1-25pc.jpg" alt="Imagen 1" loading="lazy"
+                    srcset="./assets/images/25pc/1-25pc.jpg 320w, ./assets/images/50pc/1-50pc.jpg 640w, ./assets/images/75pc/1-75pc.jpg 960w">
+                <img src="./assets/images/50pc/2-50pc.jpg" alt="Imagen 2" loading="lazy"
+                    srcset="./assets/images/25pc/2-25pc.jpg 320w, ./assets/images/50pc/2-50pc.jpg 640w, ./assets/images/75pc/2-75pc.jpg 960w">
+                <img src="./assets/images/50pc/3-50pc.jpg" alt="Imagen 3" loading="lazy"
+                    srcset="./assets/images/25pc/3-25pc.jpg 320w, ./assets/images/50pc/3-50pc.jpg 640w, ./assets/images/75pc/3-75pc.jpg 960w">
+                <img src="./assets/images/50pc/4-50pc.jpg" alt="Imagen 4" loading="lazy"
+                    srcset="./assets/images/25pc/4-25pc.jpg 320w, ./assets/images/50pc/4-50pc.jpg 640w, ./assets/images/75pc/4-75pc.jpg 960w">
+                <img src="./assets/images/50pc/5-50pc.jpg" alt="Imagen 5" loading="lazy"
+                    srcset="./assets/images/25pc/5-25pc.jpg 320w, ./assets/images/50pc/5-50pc.jpg 640w, ./assets/images/75pc/5-75pc.jpg 960w">
+                <img src="./assets/images/50pc/6-50pc.jpg" alt="Imagen 6" loading="lazy"
+                    srcset="./assets/images/25pc/6-25pc.jpg 320w, ./assets/images/50pc/6-50pc.jpg 640w, ./assets/images/75pc/6-75pc.jpg 960w">
+                <img src="./assets/images/50pc/7-50pc.jpg" alt="Imagen 7" loading="lazy"
+                    srcset="./assets/images/25pc/7-25pc.jpg 320w, ./assets/images/50pc/7-50pc.jpg 640w, ./assets/images/75pc/7-75pc.jpg 960w">
+                <img src="./assets/images/50pc/8-50pc.jpg" alt="Imagen 8" loading="lazy"
+                    srcset="./assets/images/25pc/8-25pc.jpg 320w, ./assets/images/50pc/8-50pc.jpg 640w, ./assets/images/75pc/8-75pc.jpg 960w">
+                <img src="./assets/images/50pc/9-50pc.jpg" alt="Imagen 9" loading="lazy"
+                    srcset="./assets/images/25pc/9-25pc.jpg 320w, ./assets/images/50pc/9-50pc.jpg 640w, ./assets/images/75pc/9-75pc.jpg 960w">
+                <img src="./assets/images/50pc/10-50pc.jpg" alt="Imagen 10" loading="lazy"
+                    srcset="./assets/images/25pc/10-25pc.jpg 320w, ./assets/images/50pc/10-50pc.jpg 640w, ./assets/images/75pc/10-75pc.jpg 960w">
+                <img src="./assets/images/50pc/11-50pc.jpg" alt="Imagen 11" loading="lazy"
+                    srcset="./assets/images/25pc/11-25pc.jpg 320w, ./assets/images/50pc/11-50pc.jpg 640w, ./assets/images/75pc/11-75pc.jpg 960w">
+                <img src="./assets/images/50pc/12-50pc.jpg" alt="Imagen 12" loading="lazy"
+                    srcset="./assets/images/25pc/12-25pc.jpg 320w, ./assets/images/50pc/12-50pc.jpg 640w, ./assets/images/75pc/12-75pc.jpg 960w">
+                <img src="./assets/images/50pc/13-50pc.jpg" alt="Imagen 13" loading="lazy"
+                    srcset="./assets/images/25pc/13-25pc.jpg 320w, ./assets/images/50pc/13-50pc.jpg 640w, ./assets/images/75pc/13-75pc.jpg 960w">
+                <img src="./assets/images/50pc/14-50pc.jpg" alt="Imagen 14" loading="lazy"
+                    srcset="./assets/images/25pc/14-25pc.jpg 320w, ./assets/images/50pc/14-50pc.jpg 640w, ./assets/images/75pc/14-75pc.jpg 960w">
+                <img src="./assets/images/50pc/15-50pc.jpg" alt="Imagen 15" loading="lazy"
+                    srcset="./assets/images/25pc/15-25pc.jpg 320w, ./assets/images/50pc/15-50pc.jpg 640w, ./assets/images/75pc/15-75pc.jpg 960w">
+                <img src="./assets/images/50pc/16-50pc.jpg" alt="Imagen 16" loading="lazy"
+                    srcset="./assets/images/25pc/16-25pc.jpg 320w, ./assets/images/50pc/16-50pc.jpg 640w, ./assets/images/75pc/16-75pc.jpg 960w">
+                <img src="./assets/images/50pc/17-50pc.jpg" alt="Imagen 17" loading="lazy"
+                    srcset="./assets/images/25pc/17-25pc.jpg 320w, ./assets/images/50pc/17-50pc.jpg 640w, ./assets/images/75pc/17-75pc.jpg 960w">
+                <img src="./assets/images/50pc/18-50pc.jpg" alt="Imagen 18" loading="lazy"
+                    srcset="./assets/images/25pc/18-25pc.jpg 320w, ./assets/images/50pc/18-50pc.jpg 640w, ./assets/images/75pc/18-75pc.jpg 960w">
+                <img src="./assets/images/50pc/19-50pc.jpg" alt="Imagen 19" loading="lazy"
+                    srcset="./assets/images/25pc/19-25pc.jpg 320w, ./assets/images/50pc/19-50pc.jpg 640w, ./assets/images/75pc/19-75pc.jpg 960w">
+                <img src="./assets/images/50pc/20-50pc.jpg" alt="Imagen 20" loading="lazy"
+                    srcset="./assets/images/25pc/20-25pc.jpg 320w, ./assets/images/50pc/20-50pc.jpg 640w, ./assets/images/75pc/20-75pc.jpg 960w">
+                <img src="./assets/images/50pc/21-50pc.jpg" alt="Imagen 21" loading="lazy"
+                    srcset="./assets/images/25pc/21-25pc.jpg 320w, ./assets/images/50pc/21-50pc.jpg 640w, ./assets/images/75pc/21-75pc.jpg 960w">
+                <img src="./assets/images/50pc/22-50pc.jpg" alt="Imagen 22" loading="lazy"
+                    srcset="./assets/images/25pc/22-25pc.jpg 320w, ./assets/images/50pc/22-50pc.jpg 640w, ./assets/images/75pc/22-75pc.jpg 960w">
+                <img src="./assets/images/50pc/23-50pc.jpg" alt="Imagen 23" loading="lazy"
+                    srcset="./assets/images/25pc/23-25pc.jpg 320w, ./assets/images/50pc/23-50pc.jpg 640w, ./assets/images/75pc/23-75pc.jpg 960w">
+                <img src="./assets/images/50pc/24-50pc.jpg" alt="Imagen 24" loading="lazy"
+                    srcset="./assets/images/25pc/24-25pc.jpg 320w, ./assets/images/50pc/24-50pc.jpg 640w, ./assets/images/75pc/24-75pc.jpg 960w">
+                <img src="./assets/images/50pc/25-50pc.jpg" alt="Imagen 25" loading="lazy"
+                    srcset="./assets/images/25pc/25-25pc.jpg 320w, ./assets/images/50pc/25-50pc.jpg 640w, ./assets/images/75pc/25-75pc.jpg 960w">
+                <img src="./assets/images/50pc/26-50pc.jpg" alt="Imagen 26" loading="lazy"
+                    srcset="./assets/images/25pc/26-25pc.jpg 320w, ./assets/images/50pc/26-50pc.jpg 640w, ./assets/images/75pc/26-75pc.jpg 960w">
+                <img src="./assets/images/50pc/27-50pc.jpg" alt="Imagen 27" loading="lazy"
+                    srcset="./assets/images/25pc/27-25pc.jpg 320w, ./assets/images/50pc/27-50pc.jpg 640w, ./assets/images/75pc/27-75pc.jpg 960w">
+                <img src="./assets/images/50pc/28-50pc.jpg" alt="Imagen 28" loading="lazy"
+                    srcset="./assets/images/25pc/28-25pc.jpg 320w, ./assets/images/50pc/28-50pc.jpg 640w, ./assets/images/75pc/28-75pc.jpg 960w">
+                <img src="./assets/images/50pc/29-50pc.jpg" alt="Imagen 29" loading="lazy"
+                    srcset="./assets/images/25pc/29-25pc.jpg 320w, ./assets/images/50pc/29-50pc.jpg 640w, ./assets/images/75pc/29-75pc.jpg 960w">
+                <img src="./assets/images/50pc/30-50pc.jpg" alt="Imagen 30" loading="lazy"
+                    srcset="./assets/images/25pc/30-25pc.jpg 320w, ./assets/images/50pc/30-50pc.jpg 640w, ./assets/images/75pc/30-75pc.jpg 960w">
+                <img src="./assets/images/50pc/31-50pc.jpg" alt="Imagen 31" loading="lazy"
+                    srcset="./assets/images/25pc/31-25pc.jpg 320w, ./assets/images/50pc/31-50pc.jpg 640w, ./assets/images/75pc/31-75pc.jpg 960w">
+                <img src="./assets/images/50pc/32-50pc.jpg" alt="Imagen 32" loading="lazy"
+                    srcset="./assets/images/25pc/32-25pc.jpg 320w, ./assets/images/50pc/32-50pc.jpg 640w, ./assets/images/75pc/32-75pc.jpg 960w">
+                <img src="./assets/images/50pc/33-50pc.jpg" alt="Imagen 33" loading="lazy"
+                    srcset="./assets/images/25pc/33-25pc.jpg 320w, ./assets/images/50pc/33-50pc.jpg 640w, ./assets/images/75pc/33-75pc.jpg 960w">
+                <img src="./assets/images/50pc/34-50pc.jpg" alt="Imagen 34" loading="lazy"
+                    srcset="./assets/images/25pc/34-25pc.jpg 320w, ./assets/images/50pc/34-50pc.jpg 640w, ./assets/images/75pc/34-75pc.jpg 960w">
+                <img src="./assets/images/50pc/35-50pc.jpg" alt="Imagen 35" loading="lazy"
+                    srcset="./assets/images/25pc/35-25pc.jpg 320w, ./assets/images/50pc/35-50pc.jpg 640w, ./assets/images/75pc/35-75pc.jpg 960w">
+                <img src="./assets/images/50pc/36-50pc.jpg" alt="Imagen 36" loading="lazy"
+                    srcset="./assets/images/25pc/36-25pc.jpg 320w, ./assets/images/50pc/36-50pc.jpg 640w, ./assets/images/75pc/36-75pc.jpg 960w">
+                <img src="./assets/images/50pc/37-50pc.jpg" alt="Imagen 37" loading="lazy"
+                    srcset="./assets/images/25pc/37-25pc.jpg 320w, ./assets/images/50pc/37-50pc.jpg 640w, ./assets/images/75pc/37-75pc.jpg 960w">
+                <img src="./assets/images/50pc/38-50pc.jpg" alt="Imagen 38" loading="lazy"
+                    srcset="./assets/images/25pc/38-25pc.jpg 320w, ./assets/images/50pc/38-50pc.jpg 640w, ./assets/images/75pc/38-75pc.jpg 960w">
+                <img src="./assets/images/50pc/39-50pc.jpg" alt="Imagen 39" loading="lazy"
+                    srcset="./assets/images/25pc/39-25pc.jpg 320w, ./assets/images/50pc/39-50pc.jpg 640w, ./assets/images/75pc/39-75pc.jpg 960w">
+                <img src="./assets/images/50pc/40-50pc.jpg" alt="Imagen 40" loading="lazy"
+                    srcset="./assets/images/25pc/40-25pc.jpg 320w, ./assets/images/50pc/40-50pc.jpg 640w, ./assets/images/75pc/40-75pc.jpg 960w">
+            </section>
+        </div>
+    </main>
+
+    <!-- Bloque -->
+    <footer id="footer" class="footer">
+        <div class="container container--footer">
+            <span class="footer__credit">Hecho con
+                <img class="footer__credit--logo" src="./assets/images/heart-logo.png" alt="Corazon de Niji"> por
+                <a class="footer__credit--link" href="https://github.com/dpokey" target="_blank"
+                    rel="noopener noreferrer">@dpokey</a>
+            </span>
+        </div>
+    </footer>
+
+
+    <script src="./js/main.js"></script>
+    <script src="./js/superUnderline.js"></script>
+    <script>
+        if (CSS.paintWorklet) {
+            CSS.paintWorklet.addModule('./js/connections.js');
+            CSS.paintWorklet.addModule('./js/voronoi.js');
+        }
+    </script>
+</body>
+
+</html>

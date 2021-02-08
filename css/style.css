@@ -1,0 +1,547 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    animation-duration: .5s;
+    animation-name: fade;
+    background-image: linear-gradient(180deg, #ffe6e6 0%, #ffabe1 33%, #a685e2 66%, #6155a6 100%);
+    background-repeat: no-repeat;
+    color: #222831;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Rubik-Regular', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    min-height: 100vh;
+    padding: 60px 0 0;
+    transition: all .3s ease;
+}
+
+.body {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.body--darkmode {
+    background-color: #0a0a0a;
+    background-image: unset;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+.container--header {
+    align-items: stretch;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+}
+
+.container--footer {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* Header */
+.header {
+    background-color: #fff;
+    box-shadow: 0 5px 10px 0 rgba(0, 64, 128, .05);
+    color: #222831;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    transition: all .5s ease;
+    width: 100%;
+}
+
+.header--darkmode {
+    background-color: #1f1f1f;
+    background-image: unset;
+    box-shadow: 0 5px 10px 0 rgba(163, 163, 163, .05);
+    color: #FFF;
+}
+
+.header__logo {
+    align-items: center;
+    display: flex;
+}
+
+.header__logo-link {
+    white-space: nowrap;
+}
+
+.header__logo-icon {
+    background-image: url(../assets/images/niji-logo-lightmode.svg);
+    background-repeat: no-repeat;
+    background-size: 30px 45px;
+    display: inline-block;
+    height: 45px;
+    margin-right: 5px;
+    position: relative;
+    top: 0;
+    vertical-align: middle;
+    width: 30px;
+}
+
+.header__logo-icon--darkmode {
+    background-image: url(../assets/images/niji-logo-darkmode.svg);
+}
+
+.header__logo-title {
+    display: inline-block;
+    font-size: 14px;
+    text-rendering: optimizeLegibility;
+    transition: all .3s ease;
+    vertical-align: middle;
+}
+
+.header__options {
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+.header__social {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+..header__social-link {}
+
+.header__social-link--twitter {
+    background-color: #1b95e0;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    color: #FFF;
+    font-size: 12px;
+    margin: 0 5px;
+    padding: 3px 3px;
+    white-space: nowrap;
+}
+
+.header__social-link--github {
+    background-color: #eff3f6;
+    border: 1px solid;
+    border-color: rgba(27, 31, 35, .2);
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    color: #000;
+    font-size: 12px;
+    margin: 0 5px;
+    padding: 2px 3px;
+    white-space: nowrap;
+}
+
+.header__switch {
+    align-items: center;
+    background-color: #343D58;
+    border: none;
+    border-radius: 1000px;
+    cursor: pointer;
+    display: flex;
+    height: 20px;
+    justify-content: space-evenly;
+    outline: none;
+    position: relative;
+    width: 50px;
+}
+
+.header__switch::after {
+    background-color: #F1F1F1;
+    border-radius: 100px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .2);
+    content: "";
+    display: block;
+    height: 25px;
+    left: 0;
+    position: absolute;
+    right: unset;
+    top: 50;
+    transition: all .3s ease;
+    width: 25px;
+}
+
+.header__switch--active {
+    background-color: orange;
+    color: #000;
+}
+
+.header__switch--active::after {
+    left: unset;
+    right: 0;
+}
+
+.header__switch-icon {
+    background: none;
+    color: #FFF;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    width: 25px;
+}
+
+.header__menu {
+    cursor: pointer;
+    display: inline;
+    padding: 0 10px;
+}
+
+.header__menu-icon {
+    color: #bccddf;
+    font-size: 20px;
+}
+
+.header__menu-icon:hover {}
+
+.header__menu-main {
+    animation-duration: .2s;
+    animation-name: drop;
+    background-color: #FFF;
+    border-radius: 0 0 6px 6px;
+    border-top: 1px solid #e9f2f9;
+    box-shadow: 0 10px 40px -10px rgba(0, 64, 128, .2);
+    color: #222831;
+    display: none;
+    font-size: 14px;
+    overflow: hidden;
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    transform-origin: top;
+    transition: all .3s ease;
+    z-index: 100;
+}
+
+.header__menu-main--show {
+    display: block;
+}
+
+.header__menu-main--darkmode {
+    background-color: #333333;
+    background-image: unset;
+    border-top: 1px solid #0a0a0a;
+    color: #FFF;
+}
+
+.header__menu-link {
+    border: none;
+    border-radius: 0;
+    display: block;
+    line-height: 36px;
+    margin: 0;
+    padding: 0 60px 0 20px;
+    text-align: left;
+    transition: all .3s ease;
+    width: max-content;
+}
+
+.header__menu-link--selected {
+    color: #899bb4;
+}
+
+.header__menu-link--selected-darkmode {
+    color: #525252;
+}
+
+.header__menu-seperator {
+    background-color: #e9f2f9;
+    height: 1px;
+}
+
+.header__menu-seperator--darkmode {
+    background-color: #0a0a0a;
+}
+
+/* Main */
+/* 
+.container--main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(auto, 7vmin) auto auto;
+    grid-auto-rows: minmax(auto, 12vmin);
+    grid-template-areas: "header"
+        "gallery"
+        "footer";
+    grid-gap: 5px;
+    min-height: 100vh;
+} 
+*/
+.gallery {
+    align-items: center;
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-auto-rows: 100px;
+    grid-gap: 1px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    justify-items: center;
+    margin: 0;
+}
+
+.gallery img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.gallery img:nth-child(2n+1) {
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+.gallery img:nth-child(5n) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.gallery img:nth-child(6n) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.footer {
+    background-color: white;
+    box-shadow: 0 5px 10px 0 rgba(0, 64, 128, .05);
+    color: #222831;
+    height: 50px;
+    line-height: 50px;
+    margin-top: auto;
+    transition: all .3s ease;
+    width: 100%;
+}
+
+.footer__credit {}
+
+.footer__credit--logo {
+    width: 14px;
+}
+
+.footer__credit--link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer--darkmode {
+    background-color: #1f1f1f;
+    background-image: unset;
+    color: #FFF;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Rubik-Regular';
+    src: url('../assets/fonts/Rubik-Regular.ttf');
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: scaleY(0.5);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .gallery {
+        grid-auto-rows: 150px;
+        grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    }
+}
+
+@media screen and (min-width: 1360px) {
+    .container {
+        max-width: 1360px;
+    }
+
+    .header__logo-title {
+        font-size: 20px;
+    }
+
+    .header__menu-icon {
+        font-size: 24px;
+    }
+
+    .gallery {
+        grid-auto-rows: 200px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media screen and (min-width: 1640px) {
+    .container {
+        max-width: 1640px;
+    }
+}
+
+/* Google Chrome Developers */
+/* Media query que detecta modo darkmode del sistema */
+/* 
+@media (prefers-color-scheme: dark) {
+    .header__switch {
+        background-color: orange;
+        color: #000;
+    }
+    
+    .header__switch::after {
+        left: unset;
+        right: 0;
+    }
+    
+    body {
+        background-color: #0a0a0a;
+        background-image: unset;
+    }
+
+    .header {
+        background-color: #1f1f1f;
+        background-image: unset;
+        box-shadow: 0 5px 10px 0 rgba(163, 163, 163, .05);
+        color: #FFF;
+    }
+
+    .header__logo-icon {
+        background-image: url(../assets/images/niji-logo-darkmode.svg);
+    }
+
+    .header__menu-main {
+        background-color: #333333;
+        background-image: unset;
+        border-top: 1px solid #0a0a0a;
+        color: #FFF;
+    }
+
+    .header__menu-link--selected {
+        color: #525252;
+    }
+    
+    .header__menu-seperator {
+        background-color: #0a0a0a;
+    }
+
+    .footer {
+        background-color: #1f1f1f;
+        background-image: unset;
+        color: #FFF;
+    }
+}
+ */
+/* Houdini CSS */
+@supports (background: paint(something)) {
+    
+    /* .header {
+        --connections-particleColor: rgb(150,180,200);
+        --connections-lineColor: rgb(150,180,200);
+        --connections-particleAmount: 160;
+        --connections-defaultRadius: 1;
+        --connections-variantRadius: 2;
+        --connections-linkRadius: 82;
+        
+        background-image: paint(connections);
+    } */
+
+    .header, 
+    .footer {
+        --voronoi-number-of-cells: 125;
+        --voronoi-line-width: 1;
+        --voronoi-dot-size: 0;
+        --voronoi-cell-colors: #FFF, #dfdfdfad, #ffe6e63d, #ffabe246, #a585e248, #7763e925;
+        --voronoi-line-color: rgba(0, 0, 0, .15);
+        --voronoi-dot-color: #000;
+        --voronoi-margin: 0;
+        
+        background-image: paint(voronoi);
+        animation: voronoi 5s infinite alternate ease-in-out;
+    }
+
+    .header--darkmode,
+    .footer--darkmode {
+        --voronoi-number-of-cells: 125;
+        --voronoi-line-width: 1;
+        --voronoi-dot-size: 0;
+        --voronoi-cell-colors: #3c3d48, #282a36, #242631, #21232d, #1e2029, #1b1d25;
+        --voronoi-line-color: rgba(0, 0, 0, .15);
+        --voronoi-dot-color: #000;
+        --voronoi-margin: 0;
+        --voronoi-seed: 12345;
+
+        background-image: paint(voronoi);
+        animation: voronoi 5s infinite alternate ease-in-out;
+    }
+    
+    
+    .footer__credit {
+        /* 
+       Optionally set property values. 
+       This can be done at root or local scope 
+     */
+     --extra-underlineNumber: 5; /* default: 3 */
+     --extra-underlineColor: #8266ff; /* default: black */
+     --extra-underlineSpread: 15; /* default: 20 */
+     --extra-underlineWidth: 1; /* default: 2 */
+
+        background: paint(extra-superUnderline);
+        animation: superUnderline 0.5s infinite linear;
+    }
+}
+
+@keyframes superUnderline {
+    from {
+        --extra-underlineSpread: 15;
+    }
+
+    to {
+        --extra-underlineSpread: 20;
+    }
+}
+
+@keyframes voronoi {
+    0% {
+        --voronoi-number-of-cells: 100;
+        --voronoi-margin: -3;
+        --voronoi-seed: 91345;
+        --voronoi-seed: 68901;
+    }
+
+    25% {
+        --voronoi-number-of-cells: 120;
+        --voronoi-margin: -1;
+        --voronoi-seed: 79012;
+    }
+
+    50% {
+        --voronoi-number-of-cells: 140;
+        --voronoi-margin: 0;
+        --voronoi-seed: 80123;
+    }
+
+    75% {
+        --voronoi-number-of-cells: 160;
+        --voronoi-margin: 1;
+        --voronoi-seed: 91234;
+
+    }
+
+    100% {
+        --voronoi-number-of-cells: 180;
+        --voronoi-margin: 3;
+        --voronoi-seed: 12345;
+    }
+}
